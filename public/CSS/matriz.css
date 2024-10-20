@@ -1,0 +1,92 @@
+.app {
+  .container-matriz {
+    position: relative;
+    overflow: scroll;
+    .matriz {
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      .line {
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        min-height: 20px;
+        .cell {
+          width: var(--cell-w) !important;
+          height: var(--cell-h);
+          min-height: 2px;
+          min-width: 2px;
+          padding: 3px;
+          border: 1px solid var(--bg-btn-soft);
+
+          z-index: 9;
+
+          &:hover {
+            border: 1px solid var(--bg-btn-soft3);
+          }
+
+          &:focus {
+            border: 1px solid var(--color-contrast);
+          }
+
+          &.control {
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            user-select: none;
+
+            font-weight: bolder;
+
+            z-index: 10;
+
+            &.col {
+              background: rgba(255, 168, 168, 0.2);
+              position: relative;
+
+              .resize-col {
+                cursor: col-resize;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 5px;
+                height: 100%;
+              }
+              &:hover {
+                border-right: 1px solid var(--color-contrast);
+                border-left: 1px solid var(--color-contrast);
+                &:active {
+                  background: rgb(126, 84, 84);
+                }
+              }
+            }
+            &.row {
+              background: rgb(45, 63, 45);
+              &:hover {
+                border-top: 1px solid var(--color-contrast);
+                border-bottom: 1px solid var(--color-contrast);
+                &:active {
+                  background: rgba(184, 255, 184, 0.5);
+                }
+              }
+            }
+            &.origin {
+              background: var(--color-uncontrast);
+              border: 2px solid gray;
+              z-index: 12;
+            }
+
+            &:hover {
+              filter: brightness(3);
+              &:active {
+                filter: brightness(5) hue-rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

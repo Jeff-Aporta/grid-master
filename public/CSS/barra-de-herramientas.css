@@ -1,0 +1,47 @@
+.app {
+  .barra-de-herramientas {
+    .menu-compacto {
+      display: flex;
+      gap: 10px;
+      background: var(--bg-btn-soft2);
+      margin-top: 10px;
+      .group {
+        padding: 4px 7px;
+      }
+    }
+    .desplegable {
+      display: flex;
+      align-items: center;
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+      }
+      .titulo {
+        .nombre {
+          font-size: 18px;
+          font-weight: bolder;
+
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 10px;
+          padding: 10px;
+        }
+        .menu {
+          span {
+            font-size: smaller;
+            font-weight: lighter;
+            padding: 5px 10px;
+
+            background-color: var(--bg-btn-soft);
+
+            &:hover {
+              cursor: pointer;
+              filter: brightness(2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

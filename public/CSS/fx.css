@@ -1,0 +1,30 @@
+.app {
+  .btn-cyan {
+    background-color: var(--bg-btn-soft);
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(calc(1 + 0.5 * var(--bright-dir-uncontrast))) sepia(1)
+        saturate(2) hue-rotate(120deg);
+    }
+  }
+}
+
+* {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-uncontrast);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: lightgrey;
+  }
+}

@@ -1,0 +1,25 @@
+:root {
+  --color-contrast: white;
+  --bright-dir-contrast: 1;
+  --bright-dir-uncontrast: -1;
+  --color-uncontrast: black;
+
+  --bg-btn-soft: rgba(128, 128, 128, 0.1);
+  --bg-btn-soft2: rgba(128, 128, 128, 0.3);
+  --bg-btn-soft3: rgba(128, 128, 128, 0.5);
+}
+
+.app {
+  --cell-w: 100px;
+  --cell-h: 30px;
+  .line-0 {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .col-0 {
+    --cell-w: 50px;
+    position: sticky;
+    left: 0;
+  }
+}
